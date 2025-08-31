@@ -82,7 +82,7 @@
     link(dest, content)
   ))
 
-#let vantage(
+#let tech-lead-cv(
   name: "",
   position: "",
   links: (),

@@ -1,12 +1,11 @@
-#import "vantage-typst.typ": vantage, term, skill, styled-link
+#import "tech-lead-cv.typ": vantage, term, skill, styled-link
 #let configuration = yaml("configuration.yaml")
 
-#vantage(
+#tech-lead-cv(
   name: configuration.contacts.name,
   position: configuration.position,
   links: (
     (name: "email", link: "mailto:"+ configuration.contacts.email),
-    (name: "website", link: configuration.contacts.website.url, display: configuration.contacts.website.displayText),
     (name: "github", link: configuration.contacts.github.url, display: configuration.contacts.github.displayText),
     (name: "linkedin", link: configuration.contacts.linkedin.url, display: configuration.contacts.linkedin.displayText),
     (name: "location", link: "", display: configuration.contacts.address)
@@ -14,6 +13,12 @@
   tagline: (configuration.tagline),
   [
 
+    == Accomplishments
+    #for accomplishments in configuration.accomplishments[
+      - #configuration.accomplishments  
+
+     ]
+    
     == Experience
 
     #for job in configuration.jobs [
@@ -28,39 +33,20 @@
     
   ],
   [
-    == Objective
-
-    #configuration.objective
-
-
-    == Education
-
-    #for edu in configuration.education [
-      === #if edu.place.link != "" [
-        #link(edu.place.link)[#edu.place.name]\
-      ] else [
-        #edu.place.name\
-      ]
-
-      #edu.from - #edu.to #h(1fr) #edu.location
-
-      #edu.degree in #edu.major
-
-    ]
-
-    == Technical Expertise
+  
+    == Domain Expertise
 
     #for expertise in configuration.technical_expertise [
-      #skill(expertise.name, expertise.level)
+      #skill 
     ]
 
-    == Skills/Exposure
+    == Software Skills
 
-    #for skill in configuration.skills [
+    #for skill in configuration.software_skills [
       • #skill
     ]
 
-    == Methodology/Approach
+    == Processes
     #for method in configuration.methodology [
       • #method
     ]
@@ -70,13 +56,35 @@
       • #tool
     ]
 
-    == Achievements/Certifications
+    == Education
+  
+      #for edu in configuration.education [
+        === #if edu.place.link != "" [
+          #link(edu.place.link)[#edu.place.name]\
+        ] else [
+          #edu.place.name\
+        ]
+  
+        #edu.from - #edu.to #h(1fr) #edu.location
+  
+        #edu.degree in #edu.major
+  
+      ]
 
-    #for achievement in configuration.achievements [
-      === #achievement.name
-      \
-      #achievement.description
-    ]
+      == Affiliation
+  
+      #for edu in configuration.education [
+        === #if edu.place.link != "" [
+          #link(edu.place.link)[#edu.place.name]\
+        ] else [
+          #edu.place.name\
+        ]
+  
+        #edu.from - #edu.to #h(1fr) #edu.location
+  
+        #edu.degree in #edu.major
+  
+      ]
 
   ]
 )

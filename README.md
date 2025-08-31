@@ -1,4 +1,4 @@
-# Tech Lead Typst
+# WIP: Tech Lead Typst
 
 An ATS friendly simple Typst CV template, inspired by [vantage-typst by Sardor Mamadaliev](https://github.com/sardorml/vantage-typst). See [`example.pdf`](example.pdf) for the rendered PDF output.
 

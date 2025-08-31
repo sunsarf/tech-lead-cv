@@ -1,6 +1,6 @@
-# Vantage Typst
+# Tech Lead Typst
 
-An ATS friendly simple Typst CV template, inspired by [alta-typst by George Honeywood](https://github.com/GeorgeHoneywood/alta-typst). See [`example.pdf`](example.pdf) for the rendered PDF output.
+An ATS friendly simple Typst CV template, inspired by [vantage-typst by Sardor Mamadaliev](https://github.com/sardorml/vantage-typst). See [`example.pdf`](example.pdf) for the rendered PDF output.
 
 ![Preview](screenshot.png)
 
@@ -19,8 +19,8 @@ An ATS friendly simple Typst CV template, inspired by [alta-typst by George Hone
 2. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/sardorml/vantage-typst.git
-   cd vantage-typst
+   git clone https://github.com/sunsarf/tech-lead-cv.git
+   cd tech-lead-cv
    ```
 
 3. **Run Typst**:
@@ -71,7 +71,7 @@ Icons are from Lucide Icons and are subject to [their terms](https://lucide.dev/
 
 ## Acknowledgments
 
-- Inspired by the work of [George Honeywood](https://github.com/GeorgeHoneywood/alta-typst).
+- Inspired by the work of [Sardor Mamadaliev](https://github.com/sardorml/vantage-typst).
 - Thanks to [Lucide Icons](https://lucide.dev/icons/) for providing the icon library.
 
 For any questions or contributions, feel free to open an issue or submit a pull request!
